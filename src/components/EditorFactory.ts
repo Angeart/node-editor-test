@@ -13,13 +13,13 @@ export default function editorFactory(): Editor {
   const interfaceTypes = new InterfaceTypePlugin();
   editor.use(interfaceTypes);
 
-  editor.registerNodeType(UniformNode.name, UniformNode, "Random");
-  editor.registerNodeType(NormalNode.name, NormalNode, "Random");
-  editor.registerNodeType(ExponentialNode.name, ExponentialNode, "Random");
-  editor.registerNodeType(PercentageNode.name, PercentageNode, "Random");
+  editor.registerNodeType("Uniform", UniformNode, "Random");
+  editor.registerNodeType("Normal", NormalNode, "Random");
+  editor.registerNodeType("Exponential", ExponentialNode, "Random");
+  editor.registerNodeType("Percentage", PercentageNode, "Random");
 
-  editor.registerNodeType(FunctionNode.name, FunctionNode);
-  editor.registerNodeType(MathNode.name, MathNode);
+  editor.registerNodeType("Function", FunctionNode);
+  editor.registerNodeType("Math", MathNode);
 
   interfaceTypes
     .addType("number", "cyan")

@@ -27,11 +27,11 @@ export default class HelloWorld extends Vue {
     this.editor.use(new OptionPlugin());
     this.editor.use(new Engine(false));
 
-    this.view.registerOption(CustomRandom.name, CustomRandom);
+    this.view.registerOption("CustomRandomOption", CustomRandom);
     this.view.registerOption("DiscreteRandomOption", DiscreteOption);
 
-    this.view.registerOption(StringListOption.name, StringListOption);
-    this.view.registerOption(CustomButtonOption.name, CustomButtonOption);
+    this.view.registerOption("StringListOption", StringListOption);
+    this.view.registerOption("CustomButtonOption", CustomButtonOption);
     this.view.registerOption("FunctionSidebarOption", CodeOption);
   }
 }
